@@ -1,0 +1,17 @@
+name: Build EBE Drum Splitter
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Show project files
+        run: ls -la
